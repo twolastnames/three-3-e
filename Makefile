@@ -1,29 +1,55 @@
 
-TEMPLATE_PROJECT='template-project$$'
+#TEMPLATE_PROJECT='template-project$$'
+TEMPLATE_PROJECT=three)(3
+APPLICATION_NAME=three)(3
+APPLICATION_DIR=app
+BUNDLE_DIR=tmp/$(APPLICATION_NAME)
 
+PUSH_ARGS?=
+
+.PHONEY: deploy
 deploy:
-	mkdir -p $(TEMPLATE_PROJECT)
+#	mkdir -p '$(TEMPLATE_PROJECT)'
 #	cd build && couchapp init
-	cd $(TEMPLATE_PROJECT) && couchapp push hello
+	cd '$(APP_NAME)' && couchapp push $(PUSH_ARGS) '$(TEMPLATE_PROJECT)'
+#	make pretty-urls
 
+SOMEPLACE?=testdb
+.PHONEY: deploy
+deploy-someplace:
+	mkdir -p '$(TEMPLATE_PROJECT)'
+#	cd build && couchapp init
+	cd '$(TEMPLATE_PROJECT)' && couchapp push $(PUSH_ARGS) '$(SOMEPLACE)'
+#	make pretty-urls
+
+bundle: "tmp/$(TEMPLATE_"
+	
+
+
+.PHONEY: create-project-template
 create-project-template:
 	curl -X PUT 'http://127.0.0.1:5984/$(TEMPLATE_PROJECT)'
 
+.PHONEY: delete-project-template
 delete-project-template:
 	curl -X DELETE 'http://127.0.0.1:5984/$(TEMPLATE_PROJECT)'
 
+.PHONEY: create-project
 create-project:
 	curl -X PUT 'http://127.0.0.1:5984/$(PROJECT)'
 	curl -X POST -H "Content-Type: application/json" -d '{"source":"$(TEMPLATE_PROJECT)","target":"$(PROJECT)"}' http://127.0.0.1:5984/_replicate
 
+.PHONEY: delete-project
 delete-project:
 	curl -X DELETE http://127.0.0.1:5984/$(PROJECT)
 
-createdb:
-	curl -X PUT http://127.0.0.1:5984/testdb
+.PHONEY: pretty-urls
+pretty-urls:
+	curl -X PUT -d '{"rewrites":[{"from":"thens","to":"_view/thens","method":"GET","query":"{}"}]}' 'http://127.0.0.1:5984/$(TEMPLATE_PROJECT)/_design/$(TEMPLATE_PROJECT)'
 
-deletedb:
-	curl -X DELETE http://127.0.0.1:5984/testdb
+.PHONEY: example-view
+example-view:
+	curl 'http://127.0.0.1:5984/testdb/_design/$(TEMPLATE_PROJECT)/_view/statements'
 
 DATE=`date`
 time=$$(date +'%Y%m%d-%H%M%S')
