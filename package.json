@@ -2,10 +2,14 @@
   "dependencies": {
     "async": "^2.1.5",
     "bluebird": "^3.5.0",
+    "ejs": "^2.5.6",
     "line-reader": "^0.4.0",
     "lodash": "^4.17.4",
     "nano": "^6.2.0",
     "node-rest-client": "^3.0.7",
     "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
   }
 }

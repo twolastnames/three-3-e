@@ -12,7 +12,7 @@ const createInterface = require('readline').createInterface;
 const lineReader = require('line-reader');
 
 const database = process.argv[2];
-const location = "http://localhost:5984";
+const location = "http://127.0.0.1:5984";
 
 const nano = require('nano')(format('%s/%s', location, database))
 

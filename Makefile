@@ -11,18 +11,56 @@ PUSH_ARGS?=
 deploy:
 #	mkdir -p '$(TEMPLATE_PROJECT)'
 #	cd build && couchapp init
-	cd '$(APP_NAME)' && couchapp push $(PUSH_ARGS) '$(TEMPLATE_PROJECT)'
+	cd '$(BUNDLE_DIR)' && couchapp push $(PUSH_ARGS) '$(PROJECT)'
 #	make pretty-urls
 
 SOMEPLACE?=testdb
 .PHONEY: deploy
 deploy-someplace:
-	mkdir -p '$(TEMPLATE_PROJECT)'
+#	mkdir -p '$(TEMPLATE_PROJECT)'
 #	cd build && couchapp init
 	cd '$(TEMPLATE_PROJECT)' && couchapp push $(PUSH_ARGS) '$(SOMEPLACE)'
 #	make pretty-urls
 
-bundle: "tmp/$(TEMPLATE_"
+#$(BUNDLE_DIR)/views/%: $(APPLICATION_DIR)/views/%
+#	echo target "$@"
+#	mkdir -p "$@"
+#	make "$@"/map.js
+#	make "$@"/reduce.js
+
+$(BUNDLE_DIR)/views/%/map.js: $(APPLICATION_DIR)/views/%/map.js
+	mkdir -p "$(dir $@)"
+	cp "$<" "$@"
+
+$(BUNDLE_DIR)/views/%/reduce.js: $(APPLICATION_DIR)/views/%/reduce.js
+	mkdir -p "$(dir $@)"
+	cp "$<" "$@"
+
+$(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.js
+	mkdir -p "$(dir $@)"
+	cp "$<" "$@"
+		
+$(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.js
+	mkdir -p "$(dir $@)"
+	cp "$<" "$@"
+		
+#$(BUNDLE_DIR)/views/%/*.js: $(APPLICATION_DIR)/views/%/*.js
+#	mkdir -p $(dir "$@")
+#	cp -r "$<" "$@"
+
+$(APPLICATION_DIR):
+	echo "$(BUNDLE_DIR)"
+
+.PHONEY: bundle
+bundle:
+	find "$(APPLICATION_DIR)/views/" | grep -o "\/views\/.*\.js$$" | \
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
+	find "$(APPLICATION_DIR)/lists/" | grep -o "\/lists\/.*\.js$$" | \
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
+	find "$(APPLICATION_DIR)/shows/" | grep -o "\/shows\/.*\.js$$" | \
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
+
+
 	
 
 

@@ -1,0 +1,12 @@
+[
+  {
+    "from": "thens",
+    "to": "_view/thens",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
+    "from": "/*",
+    "to": "../../../*"
+  }
+]
