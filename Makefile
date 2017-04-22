@@ -4,6 +4,8 @@ TEMPLATE_PROJECT=three)(3
 APPLICATION_NAME=three)(3
 APPLICATION_DIR=app
 BUNDLE_DIR=tmp/$(APPLICATION_NAME)
+BROWSERIFY=./node_modules/.bin/browserify
+BABEL=./node_modules/.bin/babel
 
 PUSH_ARGS?=
 
@@ -39,20 +41,18 @@ $(BUNDLE_DIR)/views/%/reduce.js: $(APPLICATION_DIR)/views/%/reduce.js
 $(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.js
 	mkdir -p "$(dir $@)"
 	cp "$<" "$@"
-		
-$(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.js
+
+$(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.js \
+	  $(APPLICATION_DIR)/shows/%.ejs ./node_modules/ejs-cli
 	mkdir -p "$(dir $@)"
 	cp "$<" "$@"
-		
-#$(BUNDLE_DIR)/views/%/*.js: $(APPLICATION_DIR)/views/%/*.js
-#	mkdir -p $(dir "$@")
-#	cp -r "$<" "$@"
 
 $(APPLICATION_DIR):
 	echo "$(BUNDLE_DIR)"
 
 .PHONEY: bundle
 bundle:
+	cp $(APPLICATION_DIR)/.couch* "$(BUNDLE_DIR)/"
 	find "$(APPLICATION_DIR)/views/" | grep -o "\/views\/.*\.js$$" | \
 	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
 	find "$(APPLICATION_DIR)/lists/" | grep -o "\/lists\/.*\.js$$" | \
@@ -60,13 +60,38 @@ bundle:
 	find "$(APPLICATION_DIR)/shows/" | grep -o "\/shows\/.*\.js$$" | \
 	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
 
+tmp:
+	mkdir -p tmp
+	cp -rf lib tmp/
 
-	
+.PHONEY: couch_node_modules
+couch_node_modules:
+	node ./scripts/couch_node_modules.js | \
+	  awk '{print "make", "\"$(BUNDLE_DIR)\"/" $$1 ".js"}' | bash
 
+$(BUNDLE_DIR)/views/whens/map.js: app/views/whens/map.js
+	mkdir -p "$(BUNDLE_DIR)/views/whens"
+	cp app/.couch* "$(BUNDLE_DIR)/"
+	echo 'function(doc) {' `$(BROWSERIFY) "$<"` "}" > "$@"
+#	node scripts/all_packages.js | awk '{ print "-r", $$1}' | \
+#	  xargs $(BROWSERIFY) -e "$<" #| echo > "$@"
+
+./node_modules/%:
+	npm install $(notdir $@)
+
+$(BUNDLE_DIR)/%.js: ./node_modules/%
+	mkdir -p "$(dir $@)"
+	$(BROWSERIFY) -r $(basename $(notdir $@)) > '$@'
+	echo >> '$@'
+	echo "module.exports.$(basename $(notdir $@)) = " \
+	  "require('$(basename $(notdir $@))');" >> '$@'
+
+clean:
+	rm -rf tmp
 
 .PHONEY: create-project-template
 create-project-template:
-	curl -X PUT 'http://127.0.0.1:5984/$(TEMPLATE_PROJECT)'
+	curl -X PUT 'http://127.0..1:5984/$(TEMPLATE_PROJECT)'
 
 .PHONEY: delete-project-template
 delete-project-template:
@@ -102,5 +127,5 @@ update:
 	curl -X PUT 'http://127.0.0.1:5984/testdb/20170106111920' -d '{"_rev":"2-c6d4b0d4328e534eb8f3a30b59a724ef", "hello": "world", "random": "something better3"}'
 
 #.PHONY test-seed
-test-seed: delete-project create-project
+test-seed: #delete-project create-project
 	cat test/import_gherkin.feature | ./scripts/import_gherkin.js $(PROJECT)

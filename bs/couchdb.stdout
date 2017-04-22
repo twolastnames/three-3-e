@@ -1,0 +1,186 @@
+
+Apache CouchDB 1.6.0 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.33.0>] Apache CouchDB has started on http://127.0.0.1:5984/
+[error] [<0.147.0>] Could not open file /var/lib/couchdb/bs.couch: no such file or directory
+[info] [<0.100.0>] 127.0.0.1 - - HEAD /bs 404
+[info] [<0.101.0>] 127.0.0.1 - - PUT /bs 201
+[info] [<0.102.0>] 127.0.0.1 - - GET /bs/_design/bs 404
+[info] [<0.102.0>] 127.0.0.1 - - PUT /bs/_design/bs 201
+[info] [<0.145.0>] 127.0.0.1 - - HEAD /bs 200
+[info] [<0.151.0>] 127.0.0.1 - - GET /bs/_design/bs 200
+[info] [<0.151.0>] 127.0.0.1 - - PUT /bs/_design/bs 201
+[info] [<0.161.0>] 127.0.0.1 - - HEAD /bs 200
+[info] [<0.114.0>] 127.0.0.1 - - GET /bs/_design/bs 200
+[info] [<0.114.0>] 127.0.0.1 - - PUT /bs/_design/bs 201
+[info] [<0.366.0>] 127.0.0.1 - - GET /testdb/_design/bs 404
+[info] [<0.379.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.198.0>] 127.0.0.1 - - GET /testdb/_design/bs 404
+[info] [<0.198.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.350.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+
+Apache CouchDB 1.6.0 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.33.0>] Apache CouchDB has started on http://127.0.0.1:5984/
+[info] [<0.100.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.146.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.173.0>] Opening index for db: testdb idx: _design/three)(3 sig: "99af1ae3da8eed89bcb32413ae7b0dca"
+[info] [<0.177.0>] Starting index update for db: testdb idx: _design/three)(3
+[info] [<0.109.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/whens 304
+[info] [<0.177.0>] Index update finished for db: testdb idx: _design/three)(3
+[info] [<0.109.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/statements 404
+[info] [<0.114.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.115.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.115.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.109.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/statements 404
+[info] [<0.158.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.171.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.171.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.276.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/statements 404
+[info] [<0.105.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.104.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.104.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.318.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/statements 404
+[info] [<0.102.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.103.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.103.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.378.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.379.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.379.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.390.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/statements 404
+[info] [<0.356.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.277.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.277.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.110.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.111.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.390.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/ 200
+[info] [<0.390.0>] 127.0.0.1 - - GET /testdb/_design/bs/ 200
+[info] [<0.390.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.106.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.317.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.317.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.532.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.345.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.394.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.394.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.344.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.108.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.577.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.573.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.582.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.574.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.574.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.607.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.611.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.608.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.608.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.634.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statements 404
+[info] [<0.391.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.417.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.417.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.634.0>] 127.0.0.1 - - GET /testdb/_design/bs/_view/statement 404
+[info] [<0.634.0>] 127.0.0.1 - - GET /testdb/_design/bs/ 200
+[info] [<0.634.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement 200
+[info] [<0.418.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.536.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.536.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.184.0>] OS Process #Port<0.2593> Log :: function raised error: (new TypeError("doc is null", "shows.statement", 4)) 
+stacktrace: ()@shows.statement:4
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {provides("html", function () {send("<h1>" + doc.statement + "</h1>");});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {provides("html", function () {send("<h1>" + doc.statement + "</h1>");});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/bs",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.647.0>] OS Process Error <0.184.0> :: {<<"render_error">>,
+                                                   <<"function raised error: (new TypeError(\"doc is null\", \"shows.statement\", 4)) \nstacktrace: ()@shows.statement:4\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {provides(\"html\", function () {send(\"<h1>\" + doc.statement + \"</h1>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {provides(\"html\", function () {send(\"<h1>\" + doc.statement + \"</h1>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/bs\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement 500
+[error] [<0.647.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new TypeError(\"doc is null\", \"shows.statement\", 4)) \nstacktrace: ()@shows.statement:4\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {provides(\"html\", function () {send(\"<h1>\" + doc.statement + \"</h1>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {provides(\"html\", function () {send(\"<h1>\" + doc.statement + \"</h1>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/bs\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.579.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.113.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.113.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement 200
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_all_docs 200
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.635.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.754.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.754.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.875.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.648.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.648.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[error] [<0.647.0>] OS Process Error <0.184.0> :: {<<"compilation_error">>,
+                                                   <<"Module require('node_modules/uuid') raised error (new ReferenceError(\"modules is not defined\", \"node_modules/uuid\", 211))">>}
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 500
+[error] [<0.647.0>] httpd 500 error response:
+ {"error":"compilation_error","reason":"Module require('node_modules/uuid') raised error (new ReferenceError(\"modules is not defined\", \"node_modules/uuid\", 211))"}
+
+[info] [<0.647.0>] 127.0.0.1 - - GET /testdb/_design/bs/ 200
+[info] [<0.897.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.749.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.749.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.750.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.642.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.896.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.896.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.184.0>] OS Process #Port<0.2593> Log :: function raised error: (new TypeError("uuid is not a function", "shows.statement", 5)) 
+stacktrace: ()@shows.statement:5
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {provides("html", function () {var uuid = require("node_modules/uuid").v4;send("<h1>" + doc.statement + "</h1><p>" + uuid() + "</p>");});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {provides("html", function () {var uuid = require("node_modules/uuid").v4;send("<h1>" + doc.statement + "</h1><p>" + uuid() + "</p>");});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/bs",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.1086.0>] OS Process Error <0.184.0> :: {<<"render_error">>,
+                                                    <<"function raised error: (new TypeError(\"uuid is not a function\", \"shows.statement\", 5)) \nstacktrace: ()@shows.statement:5\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {provides(\"html\", function () {var uuid = require(\"node_modules/uuid\").v4;send(\"<h1>\" + doc.statement + \"</h1><p>\" + uuid() + \"</p>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {provides(\"html\", function () {var uuid = require(\"node_modules/uuid\").v4;send(\"<h1>\" + doc.statement + \"</h1><p>\" + uuid() + \"</p>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/bs\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.1086.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 500
+[error] [<0.1086.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new TypeError(\"uuid is not a function\", \"shows.statement\", 5)) \nstacktrace: ()@shows.statement:5\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {provides(\"html\", function () {var uuid = require(\"node_modules/uuid\").v4;send(\"<h1>\" + doc.statement + \"</h1><p>\" + uuid() + \"</p>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {provides(\"html\", function () {var uuid = require(\"node_modules/uuid\").v4;send(\"<h1>\" + doc.statement + \"</h1><p>\" + uuid() + \"</p>\");});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/bs\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.788.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.789.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.789.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.1142.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.1143.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.101.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.101.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.112.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.1083.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1125.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.1125.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.1168.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.107.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.533.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.533.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.407.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.1215.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1216.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.1216.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.1232.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.1232.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 304
+[info] [<0.874.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1082.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.1082.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[error] [<0.581.0>] OS Process Error <0.184.0> :: {<<"compilation_error">>,
+                                                   <<"Expression does not eval to a function. (function(doc, req) {\n  provides('html', function() {\n    var uuid = require('node_modules/uuid').uuid.v4;\n    send('<h1>' + doc.statement + '</h1><p>' +\n       uuid()) + '</p>');\n/*      Number(number()).toString() + '</p>'); */\n  });\n  provides('json', function() {\n    send(JSON.stringify(doc));\n  });\n})">>}
+[info] [<0.581.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 500
+[error] [<0.581.0>] httpd 500 error response:
+ {"error":"compilation_error","reason":"Expression does not eval to a function. (function(doc, req) {\n  provides('html', function() {\n    var uuid = require('node_modules/uuid').uuid.v4;\n    send('<h1>' + doc.statement + '</h1><p>' +\n       uuid()) + '</p>');\n/*      Number(number()).toString() + '</p>'); */\n  });\n  provides('json', function() {\n    send(JSON.stringify(doc));\n  });\n})"}
+
+[info] [<0.1219.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1267.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.1267.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.1286.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200
+[info] [<0.1163.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1152.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.1152.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.1425.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1426.0>] 127.0.0.1 - - GET /testdb/_design/bs 200
+[info] [<0.1426.0>] 127.0.0.1 - - PUT /testdb/_design/bs 201
+[info] [<0.1188.0>] 127.0.0.1 - - GET /testdb/_design/bs/_show/statement/stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b 200

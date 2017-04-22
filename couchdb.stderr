@@ -1,0 +1,12 @@
+
+heart_beat_kill_pid = 30435
+heart_beat_timeout = 11
+
+heart_beat_kill_pid = 6249
+heart_beat_timeout = 11
+
+heart_beat_kill_pid = 8898
+heart_beat_timeout = 11
+
+heart_beat_kill_pid = 12534
+heart_beat_timeout = 11
