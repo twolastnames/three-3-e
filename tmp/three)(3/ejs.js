@@ -1536,4 +1536,4 @@ if (typeof window != 'undefined') {
 
 },{"../package.json":3,"./utils":2,"fs":1,"path":4}]},{},[]);
 
-module.exports.ejs =  require('ejs');
+module.exports =  require('ejs');

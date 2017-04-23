@@ -208,4 +208,4 @@ module.exports = uuid;
 
 },{"./v1":3,"./v4":4}]},{},[]);
 
-module.exports.uuid =  require('uuid');
+module.exports =  require('uuid');

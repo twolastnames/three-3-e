@@ -5,16 +5,25 @@ APPLICATION_NAME=three)(3
 APPLICATION_DIR=app
 BUNDLE_DIR=tmp/$(APPLICATION_NAME)
 BROWSERIFY=./node_modules/.bin/browserify
-BABEL=./node_modules/.bin/babel
+BABEL=./node_modules/.bin/babel --presets=es2015
+EJS_CLI=./node_modules/.bin/ejs-cli
+NODE=node
+SHOW_TEMPLATE=build_helpers/show.ejs.es6
 
 PUSH_ARGS?=
 
 .PHONEY: deploy
-deploy:
+deploy: $(BUNDLE_DIR)/.couchappignore $(BUNDLE_DIR)/.couchapprc \
+	bundle
 #	mkdir -p '$(TEMPLATE_PROJECT)'
 #	cd build && couchapp init
 	cd '$(BUNDLE_DIR)' && couchapp push $(PUSH_ARGS) '$(PROJECT)'
 #	make pretty-urls
+
+$(BUNDLE_DIR)/.couchapp%: $(APPLICATION_DIR)/.couchapp%
+	mkdir -p '$(@D)'
+	cp '$(APPLICATION_DIR)/.couchapprc' '$(BUNDLE_DIR)/'
+	cp '$(APPLICATION_DIR)/.couchappignore' '$(BUNDLE_DIR)/'
 
 SOMEPLACE?=testdb
 .PHONEY: deploy
@@ -29,36 +38,79 @@ deploy-someplace:
 #	mkdir -p "$@"
 #	make "$@"/map.js
 #	make "$@"/reduce.js
+./node_modules/%:
+	npm install $(notdir $@)
+
+#$(BUNDLE_DIR)/$(wildcard *.js): ./node_modules
+
+$(BUNDLE_DIR)/%.js: ./node_modules/%
+	mkdir -p '$(@D)'
+	$(BROWSERIFY) -r $(basename $(notdir $@)) > '$@'
+	echo >> '$@'
+	echo "module.exports = " \
+	  "require('$(basename $(notdir $@))');" >> '$@'
+	#echo "module.exports.$(basename $(notdir $@)) = " \
+	#  "require('$(basename $(notdir $@))');" >> '$@'
+
+.PHONEY: all-requires
+all-requires:
+	$(NODE) ./scripts/all_requires.js \
+		| awk '{ print "$(BUNDLE_DIR)/"$$1".js" }' \
+		| xargs make
 
 $(BUNDLE_DIR)/views/%/map.js: $(APPLICATION_DIR)/views/%/map.js
-	mkdir -p "$(dir $@)"
-	cp "$<" "$@"
+	mkdir -p '$(@D)'
+	cp '$<' '$@'
 
 $(BUNDLE_DIR)/views/%/reduce.js: $(APPLICATION_DIR)/views/%/reduce.js
-	mkdir -p "$(dir $@)"
-	cp "$<" "$@"
+	mkdir -p '$(@D)'
+	cp '$<' '$@'
 
 $(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.js
-	mkdir -p "$(dir $@)"
-	cp "$<" "$@"
+	mkdir -p '$(@D)'
+	cp '$<' '$@'
 
-$(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.js \
-	  $(APPLICATION_DIR)/shows/%.ejs ./node_modules/ejs-cli
-	mkdir -p "$(dir $@)"
-	cp "$<" "$@"
+$(BUNDLE_DIR)/views/lib/%.js: $(APPLICATION_DIR)/views/%.es6
+	mkdir -p '$(@D)'
+	cat '$<' | $(BABEL) > '$@'
+
+$(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
+	mkdir -p '$(@D)'
+	cat '$<' > '$@'
+
+$(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.es6 \
+	  $(APPLICATION_DIR)/shows/%.ejs ./node_modules/ejs-cli \
+		$(SHOW_TEMPLATE)
+	make '$(BUNDLE_DIR)/template/show/$(basename $(@F)).ejs'
+	mkdir -p '$(@D)'
+	echo 'function(doc, req) {' > '$@'
+	$(EJS_CLI) -O '{ "codeFilename" : "../$<", "showName" : "$(basename $(@F))" }' \
+	   $(SHOW_TEMPLATE) | $(BABEL) >> '$@'
+	echo '}' >> '$@'
+
+#tmp/three-3/shows/statement.js: $(APPLICATION_DIR)/shows/statement.js \
+#	  $(APPLICATION_DIR)/shows/statement.ejs ./node_modules/ejs-cli
+#	mkdir -p "$(dir $@)"
+#	cp "$<" "$@"
+
+#tmp/three-3/shows/statement.js: $(APPLICATION_DIR)/shows/statement.js
+#	echo $@
+#	echo $(BUNDLE_DIR)
+#	mkdir -p "$(dir $@)"
+#	cp "$<" "$@"
 
 $(APPLICATION_DIR):
 	echo "$(BUNDLE_DIR)"
 
 .PHONEY: bundle
-bundle:
+bundle:  all-requires
 	cp $(APPLICATION_DIR)/.couch* "$(BUNDLE_DIR)/"
 	find "$(APPLICATION_DIR)/views/" | grep -o "\/views\/.*\.js$$" | \
 	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
 	find "$(APPLICATION_DIR)/lists/" | grep -o "\/lists\/.*\.js$$" | \
 	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
-	find "$(APPLICATION_DIR)/shows/" | grep -o "\/shows\/.*\.js$$" | \
-	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
+	find "$(APPLICATION_DIR)/shows/" | grep -o "\/shows\/.*\.es6$$" | \
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | sed s/.es6$$/.js/ | xargs make
 
 tmp:
 	mkdir -p tmp
@@ -76,18 +128,9 @@ $(BUNDLE_DIR)/views/whens/map.js: app/views/whens/map.js
 #	node scripts/all_packages.js | awk '{ print "-r", $$1}' | \
 #	  xargs $(BROWSERIFY) -e "$<" #| echo > "$@"
 
-./node_modules/%:
-	npm install $(notdir $@)
-
-$(BUNDLE_DIR)/%.js: ./node_modules/%
-	mkdir -p "$(dir $@)"
-	$(BROWSERIFY) -r $(basename $(notdir $@)) > '$@'
-	echo >> '$@'
-	echo "module.exports.$(basename $(notdir $@)) = " \
-	  "require('$(basename $(notdir $@))');" >> '$@'
 
 clean:
-	rm -rf tmp
+	rm -rf tmp node_modules
 
 .PHONEY: create-project-template
 create-project-template:

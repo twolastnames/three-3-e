@@ -3123,3 +3123,450 @@ reason: normal
 [info] [<0.11671.0>] 127.0.0.1 - - GET /testdb/_design/app 200
 [info] [<0.11671.0>] 127.0.0.1 - - PUT /testdb/_design/app 201
 [info] [<0.11597.0>] 127.0.0.1 - - GET /testdb/stm_178e0083-673d-4f2b-b85d-7342f08cb585 200
+
+Apache CouchDB 1.6.0 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.33.0>] Apache CouchDB has started on http://127.0.0.1:5984/
+[info] [<0.111.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.101.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.101.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.109.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.112.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.112.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/whens 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_statement 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/statement 404
+[error] [<0.100.0>] OS Process Error <0.1185.0> :: {<<"TypeError">>,
+                                                    {[{<<"message">>,
+                                                       <<"point is undefined">>},
+                                                      {<<"fileName">>,
+                                                       <<"/usr/share/couchdb/server/main.js">>},
+                                                      {<<"lineNumber">>,1500},
+                                                      {<<"stack">>,
+                                                       <<"(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1500\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}]}}
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement 500
+[error] [<0.100.0>] httpd 500 error response:
+ {"error":"TypeError","reason":"{[{<<\"message\">>,<<\"point is undefined\">>},\n  {<<\"fileName\">>,<<\"/usr/share/couchdb/server/main.js\">>},\n  {<<\"lineNumber\">>,1500},\n  {<<\"stack\">>,\n   <<\"(\\\"_design/three)(3\\\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1500\\n()@/usr/share/couchdb/server/main.js:1562\\n@/usr/share/couchdb/server/main.js:1573\\n\">>}]}"}
+
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/ 200
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 200
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/ 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/tree)(3 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 304
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_all_docs 200
+[error] [<0.100.0>] OS Process Error <0.1185.0> :: {<<"TypeError">>,
+                                                    {[{<<"message">>,
+                                                       <<"point is undefined">>},
+                                                      {<<"fileName">>,
+                                                       <<"/usr/share/couchdb/server/main.js">>},
+                                                      {<<"lineNumber">>,1500},
+                                                      {<<"stack">>,
+                                                       <<"(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1500\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}]}}
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.100.0>] httpd 500 error response:
+ {"error":"TypeError","reason":"{[{<<\"message\">>,<<\"point is undefined\">>},\n  {<<\"fileName\">>,<<\"/usr/share/couchdb/server/main.js\">>},\n  {<<\"lineNumber\">>,1500},\n  {<<\"stack\">>,\n   <<\"(\\\"_design/three)(3\\\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1500\\n()@/usr/share/couchdb/server/main.js:1562\\n@/usr/share/couchdb/server/main.js:1573\\n\">>}]}"}
+
+[error] [<0.100.0>] OS Process Error <0.1185.0> :: {<<"TypeError">>,
+                                                    {[{<<"message">>,
+                                                       <<"point is undefined">>},
+                                                      {<<"fileName">>,
+                                                       <<"/usr/share/couchdb/server/main.js">>},
+                                                      {<<"lineNumber">>,1500},
+                                                      {<<"stack">>,
+                                                       <<"(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1500\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}]}}
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.100.0>] httpd 500 error response:
+ {"error":"TypeError","reason":"{[{<<\"message\">>,<<\"point is undefined\">>},\n  {<<\"fileName\">>,<<\"/usr/share/couchdb/server/main.js\">>},\n  {<<\"lineNumber\">>,1500},\n  {<<\"stack\">>,\n   <<\"(\\\"_design/three)(3\\\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1500\\n()@/usr/share/couchdb/server/main.js:1562\\n@/usr/share/couchdb/server/main.js:1573\\n\">>}]}"}
+
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_all_docs 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/ 404
+[info] [<0.100.0>] 127.0.0.1 - - GET /testdb/_design/_all_docs 404
+[info] [<0.942.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.954.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.954.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.115.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.106.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.106.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[error] [<0.1152.0>] OS Process Error <0.1185.0> :: {<<"invalid_require_path">>,
+                                                     <<"Object has no property \"lib\". {\"_id\":\"_design/three)(3\",\"_rev\":\"26-d9f3eec3229e6220b8ed2b99270c8d6b\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}">>}
+[info] [<0.1152.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.1152.0>] httpd 500 error response:
+ {"error":"invalid_require_path","reason":"Object has no property \"lib\". {\"_id\":\"_design/three)(3\",\"_rev\":\"26-d9f3eec3229e6220b8ed2b99270c8d6b\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}"}
+
+[info] [<0.1152.0>] 127.0.0.1 - - GET /testdb/_design/ 404
+[info] [<0.1152.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 200
+[info] [<0.1774.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1775.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.1775.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[error] [<0.1899.0>] OS Process Error <0.1185.0> :: {<<"invalid_require_path">>,
+                                                     <<"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"27-992cbc9731c669cde94473fce2a9d3a5\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}">>}
+[info] [<0.1899.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.1899.0>] httpd 500 error response:
+ {"error":"invalid_require_path","reason":"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"27-992cbc9731c669cde94473fce2a9d3a5\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}"}
+
+[info] [<0.1116.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1117.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.1117.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1900.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.114.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.114.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1823.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1909.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.1909.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[error] [<0.102.0>] OS Process Error <0.1185.0> :: {<<"invalid_require_path">>,
+                                                    <<"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"30-be1f064af8631b7eb7ac0b5ecc426706\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}">>}
+[info] [<0.102.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.102.0>] httpd 500 error response:
+ {"error":"invalid_require_path","reason":"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"30-be1f064af8631b7eb7ac0b5ecc426706\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}"}
+
+[info] [<0.102.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 200
+[info] [<0.4016.0>] 127.0.0.1 - - GET /testdb/_all_docs 200
+[info] [<0.4016.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 304
+[info] [<0.104.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1762.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.1762.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.4022.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 200
+[info] [<0.3999.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 200
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("sendHtml is not defined", "shows.statement", 7)) 
+stacktrace: ()@shows.statement:7
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.3829.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"sendHtml is not defined\", \"shows.statement\", 7)) \nstacktrace: ()@shows.statement:7\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.3829.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.3829.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"sendHtml is not defined\", \"shows.statement\", 7)) \nstacktrace: ()@shows.statement:7\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.113.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.4542.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.4542.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[error] [<0.5065.0>] OS Process Error <0.1185.0> :: {<<"invalid_require_path">>,
+                                                     <<"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"32-61a9a8ba97ad427b82f4952e75924416\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}">>}
+[info] [<0.5065.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5065.0>] httpd 500 error response:
+ {"error":"invalid_require_path","reason":"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"32-61a9a8ba97ad427b82f4952e75924416\",\"templates\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{},\"manifest\":[\"templates/\",\"templates/show/\",\"templates/show/statement.ejs\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}"}
+
+[info] [<0.4015.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.4462.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.4462.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("shows is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.5150.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"shows is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.5150.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5150.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"shows is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5151.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.3830.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.3830.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("shows is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.4000.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"shows is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.4000.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.4000.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"shows is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(shows.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5066.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5079.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5079.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showsstatement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showsstatement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.105.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                    <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showsstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showsstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.105.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.105.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showsstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showsstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5156.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5316.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5316.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showstatement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showstatement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.5515.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.5515.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5515.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.showstatement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5521.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5317.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5317.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.4533.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.108.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.108.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.5322.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.5322.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5322.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5645.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5516.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5516.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.107.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                    <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.107.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.107.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.5478.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.5478.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5478.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.4534.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.4534.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.4534.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.110.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                    <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.110.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.110.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5672.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5673.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5673.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.5641.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5640.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5640.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("templates is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.5539.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.5539.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5539.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"templates is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(templates.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.5714.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5715.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5715.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1763.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5467.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5467.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new ReferenceError("template is not defined", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.5679.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new ReferenceError(\"template is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.5679.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.5679.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new ReferenceError(\"template is not defined\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.6007.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.5677.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.5677.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1185.0>] OS Process #Port<0.2589> Log :: function raised error: (new TypeError("ejs.render is not a function", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var ejs = require("ejs");var template = {show: {statement: "<p>\n  <%= statement %>\n</p>"}};var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var ejs = require("ejs");var template = {show: {statement: "<p>\n  <%= statement %>\n</p>"}};var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.4557.0>] OS Process Error <0.1185.0> :: {<<"render_error">>,
+                                                     <<"function raised error: (new TypeError(\"ejs.render is not a function\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.4557.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b 500
+[error] [<0.4557.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new TypeError(\"ejs.render is not a function\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send(ejs.render(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+
+Apache CouchDB 1.6.0 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.33.0>] Apache CouchDB has started on http://127.0.0.1:5984/
+[info] [<0.100.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.101.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.101.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.103.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.146.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.146.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.391.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.111.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.111.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.619.0>] Opening index for db: testdb idx: _design/three)(3 sig: "68ba8b3eb617f91320ee62ea404fe375"
+[info] [<0.624.0>] Starting index update for db: testdb idx: _design/three)(3
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id scn_a02bae6b-6c89-4b45-8bd7-c4563b8e5d65
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_bee6bd88-588c-4d1f-b46f-6fae1053a3bf
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_cf65a2a5-ac22-4399-ad11-ec666e74c295
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_8485d53f-a63b-46d6-b0ae-ce0082d6269f
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_92e3f66e-b942-4c2a-ab7a-8ab345ca173c
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_a5241694-7f8a-46b5-96c4-aec78df77241
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_308902c2-3e59-4bff-9e92-051b41ef41b3
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_51ae1038-1867-4e69-b792-94da0383bb48
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_78c970d2-55a2-4c6d-9d07-4d04ad19332b
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_e6a3c2b8-a045-4d70-a981-64987ecd4773
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id ftr_f2abc676-b464-41b2-8bbd-15cc59b35a43
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id scn_398ee423-3d24-43e3-90d0-de1c85559e42
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_be171b7e-f8a2-46c1-9827-34404f433ac3
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_c72a0d11-11ad-449b-bfd8-e39e4fc5fef8
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_e43f5815-93bc-4b82-8304-654d8220bd9e
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_56f62657-e3d1-4ed9-8de9-949dd55e6253
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_1e072e95-2f28-4df7-86d4-81cadc6f1fc0
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_18296cc0-d760-4f0b-9c1c-d26b8c49e49b
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_cb4ea9c0-881e-4d06-8604-1458b7bb7d2c
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_4a5ebb1b-b0a5-42a2-8f92-dfb6266daa42
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id stm_178e0083-673d-4f2b-b85d-7342f08cb585
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised exception ["error", "invalid_require_path", "Object has no property \"statements_by_operation\". {\"views\":{\"lib\":null},\"_module_cache\":{}}"] with doc._id ftr_26115f94-fb00-4616-983b-f7e82f4a6c27
+[info] [<0.581.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_view/whens 200
+[info] [<0.624.0>] Index update finished for db: testdb idx: _design/three)(3
+[info] [<0.581.0>] 127.0.0.1 - - GET /testdb/stm_178e0083-673d-4f2b-b85d-7342f08cb585 304
+[info] [<0.581.0>] 127.0.0.1 - - GET /testdb/_design/three)(3 200
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised error: (new TypeError("_ejs.render is not a function", "shows.statement", 9)) 
+stacktrace: sendHtml(null)@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var _ejs = require("ejs");var template = {show: {statement: "<p>\n  <%= statement %>\n</p>"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var _ejs = require("ejs");var template = {show: {statement: "<p>\n  <%= statement %>\n</p>"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.581.0>] OS Process Error <0.631.0> :: {<<"render_error">>,
+                                                   <<"function raised error: (new TypeError(\"_ejs.render is not a function\", \"shows.statement\", 9)) \nstacktrace: sendHtml(null)@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.581.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/ 500
+[error] [<0.581.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new TypeError(\"_ejs.render is not a function\", \"shows.statement\", 9)) \nstacktrace: sendHtml(null)@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.631.0>] OS Process #Port<0.2645> Log :: function raised error: (new TypeError("_ejs.render is not a function", "shows.statement", 9)) 
+stacktrace: sendHtml([object Object])@shows.statement:9
+()@shows.statement:13
+runProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793
+runShow(function (doc, req) {"use strict";var _ejs = require("ejs");var template = {show: {statement: "<p>\n  <%= statement %>\n</p>"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933
+(function (doc, req) {"use strict";var _ejs = require("ejs");var template = {show: {statement: "<p>\n  <%= statement %>\n</p>"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides("html", function () {sendHtml(doc);});provides("json", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029
+("_design/three)(3",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517
+()@/usr/share/couchdb/server/main.js:1562
+@/usr/share/couchdb/server/main.js:1573
+
+[error] [<0.581.0>] OS Process Error <0.631.0> :: {<<"render_error">>,
+                                                   <<"function raised error: (new TypeError(\"_ejs.render is not a function\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n">>}
+[info] [<0.581.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_178e0083-673d-4f2b-b85d-7342f08cb585 500
+[error] [<0.581.0>] httpd 500 error response:
+ {"error":"render_error","reason":"function raised error: (new TypeError(\"_ejs.render is not a function\", \"shows.statement\", 9)) \nstacktrace: sendHtml([object Object])@shows.statement:9\n()@shows.statement:13\nrunProvides([object Object],[object Object])@/usr/share/couchdb/server/main.js:793\nrunShow(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:933\n(function (doc, req) {\"use strict\";var _ejs = require(\"ejs\");var template = {show: {statement: \"<p>\\n  <%= statement %>\\n</p>\"}};var sendHtml = function sendHtml(data) {send((0, _ejs.render)(template.show.statement, data));};provides(\"html\", function () {sendHtml(doc);});provides(\"json\", function () {send(JSON.stringify(doc));});},[object Object],[object Array])@/usr/share/couchdb/server/main.js:1029\n(\"_design/three)(3\",[object Array],[object Array])@/usr/share/couchdb/server/main.js:1517\n()@/usr/share/couchdb/server/main.js:1562\n@/usr/share/couchdb/server/main.js:1573\n"}
+
+[info] [<0.617.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.582.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.582.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.157.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_178e0083-673d-4f2b-b85d-7342f08cb585 200
+[info] [<0.106.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.392.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.392.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[error] [<0.1067.0>] OS Process Error <0.631.0> :: {<<"invalid_require_path">>,
+                                                    <<"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"49-dc96e680a5dd35af23521cb626fe35fe\",\"views\":{\"typed_statements\":{\"map\":\"function(doc) {\\u000a  if(!(doc.statement && doc.operation)) return;\\u000a  emit(doc.operation, doc); \\u000a}\"},\"statements\":{\"map\":\"function(doc) {\\u000a  if(!(doc.statement && doc.operation)) return;\\u000a  var key = doc.operation + ' ' + doc.statement.toLowerCase();\\u000a  emit(key, doc); \\u000a}\"},\"whens\":{\"map\":\"function(doc) { }\"},\"thens\":{\"map\":\"function (doc) {\\u000a  return require('statements_by_operation').statementsByOperation('then', doc);\\u000a}\"}},\"lists\":{\"statements\":\"function(head, req) {\\u000a  var template = {};\\u000a\\u000a  provides(\\\"html\\\", function() {\\u000a    html = '<ul class=\\\"statements\\\">';\\u000a    while(row = getRow()) {\\u000a      return template(template.statements.row, {row: row}); \\u000a\\u000a/*      statement = row.value.statement;\\u000a      operation = row.value.operation;\\u000a      html += '<li>';\\u000a      html +=   '<span class=\\\"operation\\\">' + operation + '</span> ';\\u000a      html +=   '<span class=\\\"statement\\\">' + statement + '</span>';\\u000a      html += '</li>';*/\\u000a    }\\u000a    html += '</ul>';\\u000a    return html;\\u000a  });\\u000a}\"},\"template\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{\"9cb8cdf01222f71b0e24e97477a971ce\":\"function(head, req) {\\u000a  // !json template.statements\\u000a\\u000a  provides(\\\"html\\\", function() {\\u000a    html = '<ul class=\\\"statements\\\">';\\u000a    while(row = getRow()) {\\u000a      return template(template.statements.row, {row: row}); \\u000a\\u000a/*      statement = row.value.statement;\\u000a      operation = row.value.operation;\\u000a      html += '<li>';\\u000a      html +=   '<span class=\\\"operation\\\">' + operation + '</span> ';\\u000a      html +=   '<span class=\\\"statement\\\">' + statement + '</span>';\\u000a      html += '</li>';*/\\u000a    }\\u000a    html += '</ul>';\\u000a    return html;\\u000a  });\\u000a}\",\"3969da43a066f6c291640f30c1285bb7\":\"function(doc, req) {\\u000a'use strict';\\u000a\\u000avar _ejs = require('ejs');\\u000a\\u000a// !json template.show.statement\\u000a\\u000avar sendHtml = function sendHtml(data) {\\u000a  send((0, _ejs.render)(template.show.statement, data));\\u000a  //send(Object.keys(ejs))\\u000a};\\u000a\\u000aprovides('html', function () {\\u000a  sendHtml(doc);\\u000a  //  send('<h1>' + doc.statement + '</h1><p>' +\\u000a  //    Number(number()).toString() + '</p>');\\u000a});\\u000a\\u000aprovides('json', function () {\\u000a  send(JSON.stringify(doc));\\u000a});\\u000a\\u000a}\"},\"manifest\":[\"lists/\",\"lists/statements.js\",\"template/\",\"template/show/\",\"template/show/statement.ejs\",\"views/\",\"views/statements/\",\"views/statements/map.js\",\"views/typed_statements/\",\"views/typed_statements/map.js\",\"views/thens/\",\"views/thens/map.js\",\"views/whens/\",\"views/whens/map.js\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}">>}
+[info] [<0.1067.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_178e0083-673d-4f2b-b85d-7342f08cb585 500
+[error] [<0.1067.0>] httpd 500 error response:
+ {"error":"invalid_require_path","reason":"Object has no property \"ejs\". {\"_id\":\"_design/three)(3\",\"_rev\":\"49-dc96e680a5dd35af23521cb626fe35fe\",\"views\":{\"typed_statements\":{\"map\":\"function(doc) {\\u000a  if(!(doc.statement && doc.operation)) return;\\u000a  emit(doc.operation, doc); \\u000a}\"},\"statements\":{\"map\":\"function(doc) {\\u000a  if(!(doc.statement && doc.operation)) return;\\u000a  var key = doc.operation + ' ' + doc.statement.toLowerCase();\\u000a  emit(key, doc); \\u000a}\"},\"whens\":{\"map\":\"function(doc) { }\"},\"thens\":{\"map\":\"function (doc) {\\u000a  return require('statements_by_operation').statementsByOperation('then', doc);\\u000a}\"}},\"lists\":{\"statements\":\"function(head, req) {\\u000a  var template = {};\\u000a\\u000a  provides(\\\"html\\\", function() {\\u000a    html = '<ul class=\\\"statements\\\">';\\u000a    while(row = getRow()) {\\u000a      return template(template.statements.row, {row: row}); \\u000a\\u000a/*      statement = row.value.statement;\\u000a      operation = row.value.operation;\\u000a      html += '<li>';\\u000a      html +=   '<span class=\\\"operation\\\">' + operation + '</span> ';\\u000a      html +=   '<span class=\\\"statement\\\">' + statement + '</span>';\\u000a      html += '</li>';*/\\u000a    }\\u000a    html += '</ul>';\\u000a    return html;\\u000a  });\\u000a}\"},\"template\":{\"show\":{\"statement\":\"<p>\\u000a  <%= statement %>\\u000a</p>\"}},\"shows\":{},\"couchapp\":{\"signatures\":{},\"objects\":{\"9cb8cdf01222f71b0e24e97477a971ce\":\"function(head, req) {\\u000a  // !json template.statements\\u000a\\u000a  provides(\\\"html\\\", function() {\\u000a    html = '<ul class=\\\"statements\\\">';\\u000a    while(row = getRow()) {\\u000a      return template(template.statements.row, {row: row}); \\u000a\\u000a/*      statement = row.value.statement;\\u000a      operation = row.value.operation;\\u000a      html += '<li>';\\u000a      html +=   '<span class=\\\"operation\\\">' + operation + '</span> ';\\u000a      html +=   '<span class=\\\"statement\\\">' + statement + '</span>';\\u000a      html += '</li>';*/\\u000a    }\\u000a    html += '</ul>';\\u000a    return html;\\u000a  });\\u000a}\",\"3969da43a066f6c291640f30c1285bb7\":\"function(doc, req) {\\u000a'use strict';\\u000a\\u000avar _ejs = require('ejs');\\u000a\\u000a// !json template.show.statement\\u000a\\u000avar sendHtml = function sendHtml(data) {\\u000a  send((0, _ejs.render)(template.show.statement, data));\\u000a  //send(Object.keys(ejs))\\u000a};\\u000a\\u000aprovides('html', function () {\\u000a  sendHtml(doc);\\u000a  //  send('<h1>' + doc.statement + '</h1><p>' +\\u000a  //    Number(number()).toString() + '</p>');\\u000a});\\u000a\\u000aprovides('json', function () {\\u000a  send(JSON.stringify(doc));\\u000a});\\u000a\\u000a}\"},\"manifest\":[\"lists/\",\"lists/statements.js\",\"template/\",\"template/show/\",\"template/show/statement.ejs\",\"views/\",\"views/statements/\",\"views/statements/map.js\",\"views/typed_statements/\",\"views/typed_statements/map.js\",\"views/thens/\",\"views/thens/map.js\",\"views/whens/\",\"views/whens/map.js\",\"shows/\",\"shows/statement.js\"]},\"_module_cache\":{}}"}
+
+[info] [<0.1056.0>] 127.0.0.1 - - HEAD /testdb 200
+[info] [<0.1057.0>] 127.0.0.1 - - GET /testdb/_design/three%29%283 200
+[info] [<0.1057.0>] 127.0.0.1 - - PUT /testdb/_design/three%29%283 201
+[info] [<0.1188.0>] 127.0.0.1 - - GET /testdb/_design/three)(3/_show/statement/stm_178e0083-673d-4f2b-b85d-7342f08cb585 200

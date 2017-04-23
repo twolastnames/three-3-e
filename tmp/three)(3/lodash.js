@@ -17088,4 +17088,4 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}]},{},[]);
 
-module.exports.lodash =  require('lodash');
+module.exports =  require('lodash');
