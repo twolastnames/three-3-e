@@ -1,5 +1,3 @@
-
-#TEMPLATE_PROJECT='template-project$$'
 TEMPLATE_PROJECT=three)(3
 APPLICATION_NAME=three)(3
 APPLICATION_DIR=app
@@ -11,6 +9,9 @@ NODE=node
 SHOW_TEMPLATE=build_helpers/show.ejs.es6
 
 PUSH_ARGS?=
+
+.PHONEY: .all
+all: deploy
 
 .PHONEY: deploy
 deploy: $(BUNDLE_DIR)/.couchappignore $(BUNDLE_DIR)/.couchapprc \
@@ -25,23 +26,8 @@ $(BUNDLE_DIR)/.couchapp%: $(APPLICATION_DIR)/.couchapp%
 	cp '$(APPLICATION_DIR)/.couchapprc' '$(BUNDLE_DIR)/'
 	cp '$(APPLICATION_DIR)/.couchappignore' '$(BUNDLE_DIR)/'
 
-SOMEPLACE?=testdb
-.PHONEY: deploy
-deploy-someplace:
-#	mkdir -p '$(TEMPLATE_PROJECT)'
-#	cd build && couchapp init
-	cd '$(TEMPLATE_PROJECT)' && couchapp push $(PUSH_ARGS) '$(SOMEPLACE)'
-#	make pretty-urls
-
-#$(BUNDLE_DIR)/views/%: $(APPLICATION_DIR)/views/%
-#	echo target "$@"
-#	mkdir -p "$@"
-#	make "$@"/map.js
-#	make "$@"/reduce.js
 ./node_modules/%:
 	npm install $(notdir $@)
-
-#$(BUNDLE_DIR)/$(wildcard *.js): ./node_modules
 
 $(BUNDLE_DIR)/%.js: ./node_modules/%
 	mkdir -p '$(@D)'
@@ -49,8 +35,6 @@ $(BUNDLE_DIR)/%.js: ./node_modules/%
 	echo >> '$@'
 	echo "module.exports = " \
 	  "require('$(basename $(notdir $@))');" >> '$@'
-	#echo "module.exports.$(basename $(notdir $@)) = " \
-	#  "require('$(basename $(notdir $@))');" >> '$@'
 
 .PHONEY: all-requires
 all-requires:
@@ -66,13 +50,17 @@ $(BUNDLE_DIR)/views/%/reduce.js: $(APPLICATION_DIR)/views/%/reduce.js
 	mkdir -p '$(@D)'
 	cp '$<' '$@'
 
-$(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.js
-	mkdir -p '$(@D)'
-	cp '$<' '$@'
-
 $(BUNDLE_DIR)/views/lib/%.js: $(APPLICATION_DIR)/views/%.es6
 	mkdir -p '$(@D)'
 	cat '$<' | $(BABEL) > '$@'
+
+$(BUNDLE_DIR)/template/list/%.ejs: $(APPLICATION_DIR)/lists/%.ejs
+	mkdir -p '$(@D)'
+	cat '$<' > '$@'
+
+$(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.js
+	mkdir -p '$(@D)'
+	cp '$<' '$@'
 
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
 	mkdir -p '$(@D)'
@@ -106,11 +94,11 @@ $(APPLICATION_DIR):
 bundle:  all-requires
 	cp $(APPLICATION_DIR)/.couch* "$(BUNDLE_DIR)/"
 	find "$(APPLICATION_DIR)/views/" | grep -o "\/views\/.*\.js$$" | \
-	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs -r make
 	find "$(APPLICATION_DIR)/lists/" | grep -o "\/lists\/.*\.js$$" | \
-	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs make
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | xargs -r make
 	find "$(APPLICATION_DIR)/shows/" | grep -o "\/shows\/.*\.es6$$" | \
-	  awk '{print "$(BUNDLE_DIR)"$$1}' | sed s/.es6$$/.js/ | xargs make
+	  awk '{print "$(BUNDLE_DIR)"$$1}' | sed s/.es6$$/.js/ | xargs -r make
 
 tmp:
 	mkdir -p tmp

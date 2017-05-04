@@ -1,11 +1,13 @@
 
 function(head, req) {
-  // !json template.statements
 
   provides("html", function() {
     html = '<ul class="statements">';
     while(row = getRow()) {
-      return template(template.statements.row, {row: row}); 
+      html += '<li>';
+      html += row.value.statement;
+      html += '</li>';
+      //return template(template.statements.row, {row: row});
 
 /*      statement = row.value.statement;
       operation = row.value.operation;

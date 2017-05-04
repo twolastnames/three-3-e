@@ -7,13 +7,10 @@ var _ejs = require('ejs');
 
 var sendHtml = function sendHtml(data) {
   send((0, _ejs.render)(template.show.statement, data));
-  //send(Object.keys(ejs))
 };
 
 provides('html', function () {
   sendHtml(doc);
-  //  send('<h1>' + doc.statement + '</h1><p>' +
-  //    Number(number()).toString() + '</p>');
 });
 
 provides('json', function () {
