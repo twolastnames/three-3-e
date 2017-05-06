@@ -2,16 +2,15 @@ import 'babel-polyfill';
 import { render } from 'ejs';
 import { map } from 'lodash';
 
-// !json template.list.<%= showName %>
+// !json template.list.<%= listName %>
 
 provides('html', function() {
-  const data = { rows: function *() {
-    let row;
-    while(row = getRow()) {
-      yield row.value;
-    }
+  const data = {
+    request: req,
+    getRow: getRow,
   }
-  send(render(template.list.<%= showName %>, data));
+
+  send(render(template.list.<%= listName %>, data));
 });
 
 provides('json', function() {

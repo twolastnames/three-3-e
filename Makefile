@@ -7,6 +7,7 @@ BABEL=./node_modules/.bin/babel --presets=es2015
 EJS_CLI=./node_modules/.bin/ejs-cli
 NODE=node
 SHOW_TEMPLATE=build_helpers/show.ejs.es6
+LIST_TEMPLATE=build_helpers/list.ejs.es6
 
 PUSH_ARGS?=
 
@@ -58,9 +59,9 @@ $(BUNDLE_DIR)/template/list/%.ejs: $(APPLICATION_DIR)/lists/%.ejs
 	mkdir -p '$(@D)'
 	cat '$<' > '$@'
 
-$(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.js
-	mkdir -p '$(@D)'
-	cp '$<' '$@'
+#$(BUNDLE_DIR)/list/%.js: $(APPLICATION_DIR)/lists/%.js
+#	mkdir -p '$(@D)'
+#	cp '$<' '$@'
 
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
 	mkdir -p '$(@D)'
@@ -74,6 +75,16 @@ $(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.es6 \
 	echo 'function(doc, req) {' > '$@'
 	$(EJS_CLI) -O '{ "codeFilename" : "../$<", "showName" : "$(basename $(@F))" }' \
 	   $(SHOW_TEMPLATE) | $(BABEL) >> '$@'
+	echo '}' >> '$@'
+
+$(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.es6 \
+	  $(APPLICATION_DIR)/lists/%.ejs ./node_modules/ejs-cli \
+		$(LIST_TEMPLATE)
+	make '$(BUNDLE_DIR)/template/list/$(basename $(@F)).ejs'
+	mkdir -p '$(@D)'
+	echo 'function(doc, req) {' > '$@'
+	$(EJS_CLI) -O '{ "codeFilename" : "../$<", "listName" : "$(basename $(@F))" }' \
+	   $(LIST_TEMPLATE) | $(BABEL) >> '$@'
 	echo '}' >> '$@'
 
 #tmp/three-3/shows/statement.js: $(APPLICATION_DIR)/shows/statement.js \

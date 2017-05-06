@@ -1,22 +1,30 @@
+function(doc, req) {
+'use strict';
 
-function(head, req) {
+require('babel-polyfill');
 
-  provides("html", function() {
-    html = '<ul class="statements">';
-    while(row = getRow()) {
-      html += '<li>';
-      html += row.value.statement;
-      html += '</li>';
-      //return template(template.statements.row, {row: row});
+var _ejs = require('ejs');
 
-/*      statement = row.value.statement;
-      operation = row.value.operation;
-      html += '<li>';
-      html +=   '<span class="operation">' + operation + '</span> ';
-      html +=   '<span class="statement">' + statement + '</span>';
-      html += '</li>';*/
-    }
-    html += '</ul>';
-    return html;
-  });
+var _lodash = require('lodash');
+
+// !json template.list.statements
+
+provides('html', function () {
+  var data = {
+    request: req,
+    getRow: getRow
+  };
+
+  send((0, _ejs.render)(template.list.statements, data));
+});
+
+provides('json', function () {
+  var values = [];
+  var row = void 0;
+  while (row = getRow()) {
+    values.push(row.value);
+  }
+  send(JSON.stringify(values));
+});
+
 }
