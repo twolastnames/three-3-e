@@ -63,6 +63,10 @@ $(BUNDLE_DIR)/template/list/%.ejs: $(APPLICATION_DIR)/lists/%.ejs
 #	mkdir -p '$(@D)'
 #	cp '$<' '$@'
 
+$(BUNDLE_DIR)/_attachments/index.html:
+	mkdir -p '$(@D)'
+	elm make Hello.elm --output '$@'
+
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
 	mkdir -p '$(@D)'
 	cat '$<' > '$@'
