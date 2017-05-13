@@ -3,7 +3,8 @@ APPLICATION_NAME=three)(3
 APPLICATION_DIR=app
 BUNDLE_DIR=tmp/$(APPLICATION_NAME)
 BROWSERIFY=./node_modules/.bin/browserify
-BABEL=./node_modules/.bin/babel --presets=es2015
+BABEL_BIN=./node_modules/.bin/babel
+BABEL=$(BABEL_BIN) --presets=es2015
 EJS_CLI=./node_modules/.bin/ejs-cli
 NODE=node
 SHOW_TEMPLATE=build_helpers/show.ejs.es6
@@ -14,9 +15,15 @@ PUSH_ARGS?=
 .PHONEY: .all
 all: deploy
 
+$(BABEL_BIN):
+	npm install babel
+
+setup:
+	npm install
+
 .PHONEY: deploy
 deploy: $(BUNDLE_DIR)/.couchappignore $(BUNDLE_DIR)/.couchapprc \
-	bundle
+	bundle $(BUNDLE_DIR)/_attachments/index.html
 #	mkdir -p '$(TEMPLATE_PROJECT)'
 #	cd build && couchapp init
 	cd '$(BUNDLE_DIR)' && couchapp push $(PUSH_ARGS) '$(PROJECT)'
@@ -65,7 +72,7 @@ $(BUNDLE_DIR)/template/list/%.ejs: $(APPLICATION_DIR)/lists/%.ejs
 
 $(BUNDLE_DIR)/_attachments/index.html:
 	mkdir -p '$(@D)'
-	elm make Hello.elm --output '$@'
+	elm make src/Main.elm --output '$@'
 
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
 	mkdir -p '$(@D)'
