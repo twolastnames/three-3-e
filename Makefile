@@ -69,6 +69,9 @@ $(BUNDLE_DIR)/template/list/%.ejs: $(APPLICATION_DIR)/lists/%.ejs
 #$(BUNDLE_DIR)/list/%.js: $(APPLICATION_DIR)/lists/%.js
 #	mkdir -p '$(@D)'
 #	cp '$<' '$@'
+$(BUNDLE_DIR)/template/base.ejs: $(APPLICATION_DIR)/template/base.ejs
+	mkdir -p '$(@D)'
+	cat '$<' > '$@'
 
 $(BUNDLE_DIR)/_attachments/index.html:
 	mkdir -p '$(@D)'
@@ -80,7 +83,7 @@ $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
 
 $(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.es6 \
 	  $(APPLICATION_DIR)/shows/%.ejs ./node_modules/ejs-cli \
-		$(SHOW_TEMPLATE)
+		$(SHOW_TEMPLATE) $(BUNDLE_DIR)/template/base.ejs
 	make '$(BUNDLE_DIR)/template/show/$(basename $(@F)).ejs'
 	mkdir -p '$(@D)'
 	echo 'function(doc, req) {' > '$@'
@@ -90,7 +93,7 @@ $(BUNDLE_DIR)/shows/%.js: $(APPLICATION_DIR)/shows/%.es6 \
 
 $(BUNDLE_DIR)/lists/%.js: $(APPLICATION_DIR)/lists/%.es6 \
 	  $(APPLICATION_DIR)/lists/%.ejs ./node_modules/ejs-cli \
-		$(LIST_TEMPLATE)
+		$(LIST_TEMPLATE) $(BUNDLE_DIR)/template/base.ejs
 	make '$(BUNDLE_DIR)/template/list/$(basename $(@F)).ejs'
 	mkdir -p '$(@D)'
 	echo 'function(doc, req) {' > '$@'
