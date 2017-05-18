@@ -4,7 +4,7 @@ module Main exposing (..)
 import Msgs exposing (Msg)
 import Navigation exposing (Location)
 import Routing
-import ViewShell exposing(viewShell)
+import View exposing(view)
 import Models exposing(Model)
 
 initialModel : Routing.Route -> Model
@@ -31,7 +31,7 @@ subscriptions model =
 main =
     Navigation.program Msgs.OnLocationChange
         { init = init
-        , view = viewShell
+        , view = view
         , update = update
         , subscriptions = subscriptions
         }

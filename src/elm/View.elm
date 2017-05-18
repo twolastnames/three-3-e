@@ -1,11 +1,11 @@
-module ViewShell exposing(viewShell)
+module View exposing(view)
 
 import Html exposing(a, nav, text, Html)
 import Html.Attributes exposing(href)
 import Models exposing(Model)
 
-viewShell: Model -> Html msg
-viewShell ignoredForNow =
+view: Model -> Html msg
+view ignoredForNow =
   nav []
     [ a [href "/suites"    ] [text "Suites"    ]
     , a [href "/scenarios" ] [text "Scenarios" ]

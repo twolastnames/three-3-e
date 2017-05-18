@@ -75,7 +75,8 @@ $(BUNDLE_DIR)/template/base.ejs: $(APPLICATION_DIR)/template/base.ejs
 
 $(BUNDLE_DIR)/_attachments/index.html:
 	mkdir -p '$(@D)'
-	find src/elm -type f | xargs elm make --output '$@'
+	elm package install
+	find src/elm -type f | xargs elm make --output '$@' src/elm/Main.elm
 
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
 	mkdir -p '$(@D)'
