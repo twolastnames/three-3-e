@@ -169,7 +169,7 @@ pretty-urls:
 
 .PHONEY: example-view
 example-view:
-	curl 'http://127.0.0.1:5984/testdb/_design/$(TEMPLATE_PROJECT)/_view/statements'
+	curl 'http://127.0.0.1:5984/testdb/_design/$(TEMPLATE_PROJECT)/_view/steps'
 
 DATE=`date`
 time=$$(date +'%Y%m%d-%H%M%S')

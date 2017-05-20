@@ -1,3 +1,3 @@
 function (doc) {
-  return require('statements_by_operation').statementsByOperation('then', doc);
+  return require('steps_by_operation').stepsByOperation('then', doc);
 }

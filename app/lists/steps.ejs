@@ -1,0 +1,5 @@
+<ul class="steps">
+  <% var row; while(row = getRow()) { %>
+    <li><%= row.value.operation %> <%= row.value.step %></li>
+  <% } %>
+</ul>

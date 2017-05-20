@@ -26,15 +26,15 @@ const putDocument = promisify(nano.insert);
 const getDocument = promisify(nano.get);
 
 function insertStatement(operation, description) {
-  let statement = '';
+  let step = '';
   let datas = [];
   const parts = description.split('"');
   for(let i = 0 ; i < parts.length ; i += 2) {
     const text = parts[i];
     const data = parts[i + 1];
-    statement += text;
+    step += text;
     if(!data) continue;
-    statement += '~';
+    step += '~';
     datas.push(data);
   }
   const id = 'stm_' + uuid();
@@ -51,7 +51,7 @@ function insertStatement(operation, description) {
   });
   const inserter = putDocument({
     operation: operation,
-    statement: statement,
+    step: step,
   }, id);
   return Promise.all([inserter, forScenario]);
 }
@@ -115,4 +115,3 @@ lineReader.open(process.stdin, coroutine(function*(err, reader) {
     });
   }
 }));
-

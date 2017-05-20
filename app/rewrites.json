@@ -1,5 +1,20 @@
 [
   {
+    "from": "steps",
+    "to": "_view/steps",
+    "method": "GET",
+    "arguments": "{}"
+  }  {
+    "from": "givens",
+    "to": "_view/givens",
+    "method": "GET",
+    "arguments": "{}"
+  }  {
+    "from": "whens",
+    "to": "_view/whens",
+    "method": "GET",
+    "arguments": "{}"
+  },,,  {
     "from": "thens",
     "to": "_view/thens",
     "method": "GET",
