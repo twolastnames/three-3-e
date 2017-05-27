@@ -23,7 +23,7 @@ setup:
 
 .PHONEY: deploy
 deploy: $(BUNDLE_DIR)/.couchappignore $(BUNDLE_DIR)/.couchapprc \
-	bundle $(BUNDLE_DIR)/_attachments/index.html
+	bundle $(BUNDLE_DIR)/_attachments/index.html $(BUNDLE_DIR)/rewrites.json
 #	mkdir -p '$(TEMPLATE_PROJECT)'
 #	cd build && couchapp init
 	cd '$(BUNDLE_DIR)' && couchapp push $(PUSH_ARGS) '$(PROJECT)'
@@ -79,6 +79,10 @@ $(BUNDLE_DIR)/_attachments/index.html:
 	find src/elm -type f | xargs elm make --output '$@' src/elm/Main.elm
 
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
+	mkdir -p '$(@D)'
+	cat '$<' > '$@'
+
+$(BUNDLE_DIR)/rewrites.json: $(APPLICATION_DIR)/rewrites.json
 	mkdir -p '$(@D)'
 	cat '$<' > '$@'
 
