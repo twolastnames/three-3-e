@@ -1,27 +1,66 @@
 [
   {
+    "from": "suites",
+    "to": "index.html",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
+    "from": "scenarios",
+    "to": "index.html",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
+    "from": "ambassador",
+    "to": "index.html",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
+    "from": "automator",
+    "to": "index.html",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
+    "from": "architect",
+    "to": "index.html",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
     "from": "steps",
-    "to": "_view/steps",
+    "to": "index.html",
     "method": "GET",
     "arguments": "{}"
-  }  {
+  },
+  {
     "from": "givens",
-    "to": "_view/givens",
+    "to": "index.html",
     "method": "GET",
     "arguments": "{}"
-  }  {
+  },
+  {
     "from": "whens",
-    "to": "_view/whens",
+    "to": "index.html",
     "method": "GET",
     "arguments": "{}"
-  },,,  {
+  },
+  {
     "from": "thens",
-    "to": "_view/thens",
+    "to": "index.html",
+    "method": "GET",
+    "arguments": "{}"
+  },
+  {
+    "from": "",
+    "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
     "from": "/*",
-    "to": "../../../*"
+    "to": "../../*"
   }
 ]
