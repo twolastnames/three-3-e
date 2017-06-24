@@ -5,7 +5,7 @@ import Html.Attributes exposing(href)
 import Models exposing(Model)
 
 view: Model -> Html msg
-view ignoredForNow =
+view model =
   nav []
     [ a [href "/#suites"    ] [text "Suites"    ]
     , a [href "/#scenarios" ] [text "Scenarios" ]
