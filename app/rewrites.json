@@ -1,54 +1,54 @@
 [
   {
-    "from": "suites",
+    "from": "#suites",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "scenarios",
+    "from": "#scenarios",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "ambassador",
+    "from": "#ambassador",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "automator",
+    "from": "#automator",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "architect",
+    "from": "#architect",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "steps",
+    "from": "#steps",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "givens",
+    "from": "#givens",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "whens",
+    "from": "#whens",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
   },
   {
-    "from": "thens",
+    "from": "#thens",
     "to": "index.html",
     "method": "GET",
     "arguments": "{}"
