@@ -8,13 +8,16 @@ import View exposing(view)
 import Models exposing(Model)
 
 initialModel : Routing.Route -> Model
-initialModel route = { }
+initialModel route =
+    Models.Empty
+
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Msgs.OnLocationChange location ->
-          ({}, (Cmd.none))
+          (Models.Empty, (Cmd.none))
+
 
 init : Location -> ( Model, Cmd Msg )
 init location =
