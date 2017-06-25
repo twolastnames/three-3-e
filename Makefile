@@ -5,6 +5,7 @@ BUNDLE_DIR=tmp/$(APPLICATION_NAME)
 BROWSERIFY=./node_modules/.bin/browserify
 BABEL_BIN=./node_modules/.bin/babel
 BABEL=$(BABEL_BIN) --presets=es2015
+ELM_OPTIONS ?=
 EJS_CLI=./node_modules/.bin/ejs-cli
 NODE=node
 SHOW_TEMPLATE=build_helpers/show.ejs.es6
@@ -75,7 +76,7 @@ $(BUNDLE_DIR)/template/base.ejs: $(APPLICATION_DIR)/template/base.ejs
 
 $(BUNDLE_DIR)/_attachments/index.html:
 	mkdir -p '$(@D)'
-	elm package install
+	elm $(ELM_OPTIONS) package install
 	find src/elm -type f | xargs elm make --output '$@' src/elm/Main.elm
 
 $(BUNDLE_DIR)/template/show/%.ejs: $(APPLICATION_DIR)/shows/%.ejs
