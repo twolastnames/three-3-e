@@ -11,6 +11,7 @@ import UrlParser exposing ( map
                           , top
                           )
 
+
 type alias StepId =
   String
 
@@ -36,6 +37,7 @@ type Route
   | ArchitectRoute
   | NotFoundRoute
 
+
 matchers : Parser (Route -> a) a
 matchers =
   oneOf
@@ -54,19 +56,6 @@ matchers =
     , map ArchitectRoute (s "architect")
     ]
 
--- type Route
---    = PlayersRoute
---    | PlayerRoute String
---    | NotFoundRoute
-
--- matchers : Parser (Route -> a) a
--- matchers =
---    oneOf
---        [ map PlayersRoute top
---        , map PlayerRoute (s "players" </> string)
---        , map PlayersRoute (s "players")
---        ]
-
 
 parseLocation : Location -> Route
 parseLocation location =
@@ -76,13 +65,3 @@ parseLocation location =
 
         Nothing ->
             NotFoundRoute
-
-
--- playersPath : String
--- playersPath =
---     "#players"
-
-
--- playerPath : String -> String
--- playerPath id =
---     "#players/" ++ id

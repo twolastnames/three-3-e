@@ -7,6 +7,7 @@ import Routing
 import View exposing(view)
 import Models exposing(Model)
 
+
 initialModel : Routing.Route -> Model
 initialModel route =
     Models.Empty
@@ -27,9 +28,11 @@ init location =
     in
         ( initialModel currentRoute, Cmd.none )
 
+
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
+
 
 main =
     Navigation.program Msgs.OnLocationChange
