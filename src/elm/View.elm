@@ -6,11 +6,14 @@ import Models exposing(Model)
 
 view: Model -> Html msg
 view model =
-  nav []
-    [ a [href "/#suites"    ] [text "Suites"    ]
-    , a [href "/#scenarios" ] [text "Scenarios" ]
-    , a [href "/#steps"     ] [text "Steps"     ]
-    , a [href "/#ambassador"] [text "Ambassador"]
-    , a [href "/#automator" ] [text "Automator" ]
-    , a [href "/#architect" ] [text "Architect" ]
-    ]
+  let
+      _ = Debug.log "in view" model
+  in
+      nav []
+        [ a [href "/#suites"    ] [text "Suites"    ]
+        , a [href "/#scenarios" ] [text "Scenarios" ]
+        , a [href "/#steps"     ] [text "Steps"     ]
+        , a [href "/#ambassador"] [text "Ambassador"]
+        , a [href "/#automator" ] [text "Automator" ]
+        , a [href "/#architect" ] [text "Architect" ]
+        ]

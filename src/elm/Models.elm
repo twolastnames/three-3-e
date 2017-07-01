@@ -12,4 +12,4 @@ type Operation = Given | When | Then
 
 type alias Operations = List Operation
 
-type Model = Operation | Operations | Dataless | Empty
+type Model = Operations | Operation | Empty

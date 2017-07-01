@@ -17,8 +17,14 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Msgs.OnLocationChange location ->
-          (Models.Empty, (Cmd.none))
-
+            let
+                _ = Debug.log "in location change" location
+            in
+                case location.hash of
+                    "#steps" ->
+                        (Models.Operations, (Cmd.none))
+                    _ ->
+                        (Models.Empty, (Cmd.none))
 
 init : Location -> ( Model, Cmd Msg )
 init location =
@@ -31,7 +37,10 @@ init location =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
+    let
+        _ = Debug.log "in subscriptions" model
+    in
+        Sub.none
 
 
 main =
